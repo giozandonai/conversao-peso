@@ -1,32 +1,9 @@
 version: '3.8'
 
-# networks:
-#   dist_net:
-#     driver: bridge
-
 services:
   api:
     image: giozandonai/conversao-peso:v1
-     build:                                  # já faz a criação da imagem na versão que coloquei na TAG
-    #   dockerfile: ./Dockerfile              # não precisa colocar o /src pois já foi passado no context
-    #   context: .
+    build:                                 
+      context: ./ConversaoPeso.Web/.      
     ports:
-      - 5000:5000
-    # networks:
-    #   - dist_net
-    # depends_on: 
-    #   - mongodb
-    # environment:
-      # MONGODB_URI: mongodb://mongouser:mongopwd@mongodb:27017/admin
-  
-  # mongodb:
-  #   image: mongo:4.4.3
-  #   #ports:
-  #   #- 27017:27017
-  #   networks:
-  #     - produto_net
-  #   volumes:
-  #     - mongo_vol:/data/db
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: mongouser 
-  #     MONGO_INITDB_ROOT_PASSWORD: mongopwd
+      - 8080:80
