@@ -1,0 +1,17 @@
+# Deployment da Aplicação
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: conversao-peso
+spec:
+  selector:
+    matchLabels:
+      app: conversao-peso
+  template:
+    metadata:
+      labels:
+        app: conversao-peso
+    spec:
+      containers:
+        - name: conversao-peso
+          image: giozandonai/conversao-peso:v1
