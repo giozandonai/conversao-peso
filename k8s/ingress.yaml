@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: zan-20.uffs.edu.br
+    - host: dominio.local
       http:
         paths:
         - path: /
