@@ -52,7 +52,10 @@ ENTRYPOINT ["dotnet", "ConversaoPeso.Web.dll"]
 **Acessando a aplicação:**
 `http://localhost`
 
-**KUBERNETES**
+## KUBERNETES
+
 Acessar a pasta ./k8s:
+
 `kubectl apply -f . -R`
+
 `http://nome_dominio`
