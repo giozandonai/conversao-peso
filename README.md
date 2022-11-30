@@ -4,7 +4,10 @@
 O projeto conversão de peso é um projeto desenvolvido em C# com .NET Core 5.0. O projeto tem como objetivo ser um exemplo para a criação de ambiente com containers usando .NET.
 
 ### Observações do projeto
-A aplicação é exposta usando a porta 80 
+A aplicação é exposta:<br>
+**docker compose** Usando a porta 80<br>
+**Kubernetes** Usando o ingress bare metal na porta 80<br>
+
 
 **ConversaoPeso.Web/Dockerfile**
 ```
@@ -48,3 +51,8 @@ ENTRYPOINT ["dotnet", "ConversaoPeso.Web.dll"]
 
 **Acessando a aplicação:**
 `http://localhost`
+
+**KUBERNETES**
+Acessar a pasta ./k8s:
+`kubectl apply -f . -R`
+`http://nome_dominio`
